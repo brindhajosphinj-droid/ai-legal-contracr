@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Legal Contract Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>⚖️ AI Legal Contract Generator & Risk Analyzer</h2>
+
+        <p style="text-align:center; color: gray;">
+            Generate professional employment contracts and identify legal risks instantly.
+        </p>
+
+        <form id="form">
+            <input type="text" id="employee" placeholder="Employee Name">
+            <input type="text" id="company" placeholder="Company Name">
+            <input type="text" id="role" placeholder="Job Role">
+            <input type="number" id="salary" placeholder="Salary">
+            <input type="text" id="hours" placeholder="Working Hours">
+            <input type="text" id="notice" placeholder="Notice Period">
+
+            <button type="submit">Generate Contract 🚀</button>
+        </form>
+
+        <div class="output-container">
+
+            <div class="card">
+                <h3>📄 Contract</h3>
+                <pre id="output"></pre>
+            </div>
+
+            <div>
+
+                <div class="card">
+                    <h3>⚠️ Risks</h3>
+                    <ul id="risks"></ul>
+                </div>
+
+                <div class="card">
+                    <h3>💡 Suggestions</h3>
+                    <ul id="suggestions"></ul>
+                </div>
+
+                <div class="card">
+                    <h3>📊 Risk Score</h3>
+                    <p id="score"></p>
+                </div>
+
+            </div>
+        </div>
+
+        <h3 id="resultMessage"></h3>
+
+        <!-- 🔐 CONFIDENTIAL VERIFICATION -->
+        <div class="card" id="verifyBox" style="display:none; margin-top:20px; border-left:5px solid green;">
+
+            <h3>📌 Contract Acceptance</h3>
+
+            <label>
+                <input type="checkbox" id="agree">
+                I accept the terms of this contract
+            </label>
+
+            <hr>
+
+            <h3>🔐 Employee Verification</h3>
+
+            <input type="text" id="verifyInput" placeholder="Enter Employee ID">
+
+            <button type="button" onclick="verifyEmployee()">Verify Employee</button>
+
+            <p id="verifyMessage"></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
